@@ -1,0 +1,329 @@
+/* line 17, ../scss/main.scss */
+.container {
+  display: flex;
+  margin: 30px auto;
+  max-width: 1100px;
+  justify-content: space-between;
+}
+
+/* line 24, ../scss/main.scss */
+body {
+  background: #9a8d4c;
+  color: #ffffff;
+  font-family: "Alfa Slab One", sans-serif;
+  text-align: center;
+}
+
+/* line 31, ../scss/main.scss */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 36, ../scss/main.scss */
+button {
+  font-family: "Alfa Slab One", sans-serif;
+  cursor: pointer;
+  background: #d6040e;
+  text-shadow: 2px 2px #222;
+  color: #fff;
+  padding: 6px;
+  font-size: 1.05em;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+/* line 47, ../scss/main.scss */
+button:hover {
+  background: #fb121d;
+}
+
+/* line 52, ../scss/main.scss */
+.flash {
+  animation: flash infinite 2.5s;
+}
+
+@keyframes flash {
+  /* line 58, ../scss/main.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 59, ../scss/main.scss */
+  50% {
+    opacity: 0.4;
+  }
+
+  /* line 60, ../scss/main.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 65, ../scss/main.scss */
+.map {
+  margin: 0 auto;
+}
+
+/* line 69, ../scss/main.scss */
+.area {
+  cursor: pointer;
+}
+
+/* line 73, ../scss/main.scss */
+.unit {
+  font-size: 1.2em;
+  font-family: "Alfa Slab One", sans-serif;
+  cursor: not-allowed;
+  fill: #fff;
+}
+
+/* line 82, ../scss/main.scss */
+.bars {
+  display: flex;
+  justify-content: center;
+}
+/* line 85, ../scss/main.scss */
+.bars > div {
+  height: 30px;
+}
+
+/* line 92, ../scss/main.scss */
+.player-panel {
+  background: #030f63;
+  width: 140px;
+  height: 500px;
+  text-shadow: 2px 2px #222;
+  border-radius: 5px;
+  padding: 5px;
+  border: 3px solid #222;
+  margin: 10px 0 50px;
+  font-size: 1.3em;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 105, ../scss/main.scss */
+.player-panel h1 {
+  color: #d6040e;
+  text-shadow: 2px 2px #fff;
+  font-size: 2.2em;
+  margin: 5px 0 10px;
+}
+
+/* line 113, ../scss/main.scss */
+.turn-info-message {
+  font-family: 'arial';
+  font-size: 0.8em;
+  height: 80px;
+}
+
+/* line 119, ../scss/main.scss */
+.turn-info {
+  color: #d6040e;
+  text-shadow: 2px 2px #222;
+  padding: 20px 0;
+  font-size: 1.5em;
+}
+
+/* line 127, ../scss/main.scss */
+.tip {
+  font-family: 'arial';
+  margin: 20px 0;
+  font-size: 0.8em;
+}
+
+/* line 133, ../scss/main.scss */
+.reserve-title {
+  margin: 5px 0;
+}
+
+/* line 139, ../scss/main.scss */
+.info {
+  display: none;
+  margin: 10px 0 0;
+  width: 140px;
+  text-align: left;
+}
+/* line 144, ../scss/main.scss */
+.info > div {
+  border: 2px solid #222;
+  padding: 3px 5px;
+  text-shadow: 2px 2px #222;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* line 153, ../scss/main.scss */
+.info-one {
+  background: #030f63;
+}
+/* line 155, ../scss/main.scss */
+.info-one.highlight {
+  background: #051aad;
+}
+/* line 158, ../scss/main.scss */
+.info-one.defeated {
+  background: #444444;
+}
+
+/* line 163, ../scss/main.scss */
+.info-two {
+  background: #d6040e;
+}
+/* line 165, ../scss/main.scss */
+.info-two.highlight {
+  background: #fb121d;
+}
+/* line 168, ../scss/main.scss */
+.info-two.defeated {
+  background: #444444;
+}
+
+/* line 173, ../scss/main.scss */
+.info-three {
+  background: #d86b04;
+}
+/* line 175, ../scss/main.scss */
+.info-three.highlight {
+  background: #fb8414;
+}
+/* line 178, ../scss/main.scss */
+.info-three.defeated {
+  background: #444444;
+}
+
+/* line 183, ../scss/main.scss */
+.info-four {
+  background: #0eb7ae;
+}
+/* line 185, ../scss/main.scss */
+.info-four.highlight {
+  background: #12e6db;
+}
+/* line 188, ../scss/main.scss */
+.info-four.defeated {
+  background: #444444;
+}
+
+/* line 193, ../scss/main.scss */
+.info-five {
+  background: #104704;
+}
+/* line 195, ../scss/main.scss */
+.info-five.highlight {
+  background: #208f08;
+}
+/* line 198, ../scss/main.scss */
+.info-five.defeated {
+  background: #444444;
+}
+
+/* line 203, ../scss/main.scss */
+.info-six {
+  background: #c6c617;
+}
+/* line 205, ../scss/main.scss */
+.info-six.highlight {
+  background: #e6e62a;
+}
+/* line 208, ../scss/main.scss */
+.info-six.defeated {
+  background: #444444;
+}
+
+/* line 215, ../scss/main.scss */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+}
+
+/* line 225, ../scss/main.scss */
+.content {
+  background: #917037;
+  position: relative;
+  width: 500px;
+  top: 150px;
+  margin: 0 auto;
+  border: 4px solid #222;
+  border-radius: 5px;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+/* line 239, ../scss/main.scss */
+.start-modal {
+  width: 400px;
+  background: #917037;
+  top: 100px;
+  position: relative;
+  margin: 0 auto;
+  font-family: "Alfa Slab One", sans-serif;
+  font-size: 2em;
+  z-index: 6;
+  border: 4px solid #d6040e;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+/* line 252, ../scss/main.scss */
+.start-modal input {
+  font-size: 0.8em;
+  padding: 4px;
+  font-family: "Alfa Slab One", sans-serif;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+/* line 259, ../scss/main.scss */
+.start-modal button {
+  margin: 10px auto;
+}
+
+/* line 264, ../scss/main.scss */
+.title {
+  font-size: 2.5em;
+  color: #d6040e;
+  text-shadow: 3px 3px white;
+}
+
+/* line 273, ../scss/main.scss */
+.win-content button {
+  margin: 15px auto;
+}
+
+/* line 278, ../scss/main.scss */
+.win-message {
+  font-size: 3rem;
+  text-shadow: 2px 2px #fff;
+  padding: 10px;
+}
+
+/* line 286, ../scss/main.scss */
+.bonus-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  text-shadow: 2px 2px #222;
+}
+
+/* line 298, ../scss/main.scss */
+.bonus-modal-content {
+  text-transform: capitalize;
+}
+
+/* line 302, ../scss/main.scss */
+.bonus-modal-text {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px #fff;
+  padding: 10px;
+}

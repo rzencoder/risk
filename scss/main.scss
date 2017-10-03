@@ -1,0 +1,306 @@
+//Variables
+
+$playerOneColor: #030f63;
+$playerTwoColor: #d6040e;
+$playerThreeColor: #d86b04;
+$playerFourColor: #0eb7ae;
+$playerFiveColor: #104704;
+$playerSixColor: #c6c617;
+$defeatedColor: #444;
+$background-color: #9a8d4c;
+$modalBackground: #917037;
+$titleColor: #d6040e;
+$mainFont: 'Alfa Slab One', sans-serif;
+
+//General Rules
+
+.container {
+    display: flex;
+    margin: 30px auto;
+    max-width: 1100px;
+    justify-content: space-between;
+}
+
+body {
+    background: $background-color;
+    color: #ffffff;
+    font-family: $mainFont;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-family: $mainFont;
+    cursor: pointer;
+    background: $titleColor;
+    text-shadow: 2px 2px #222;
+    color: #fff;
+    padding: 6px;
+    font-size: 1.05em;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    &:hover {
+        background: lighten($titleColor, 10%)
+    }
+}
+
+.flash {
+    animation: flash infinite 2.5s;
+    
+}
+
+@keyframes flash{
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+//Map
+
+.map {
+    margin: 0 auto;
+}
+
+.area {
+    cursor: pointer;
+}
+
+.unit {
+    font-size: 1.2em;
+    font-family: $mainFont;
+    cursor: not-allowed;
+    fill: #fff;
+}
+
+//Strength Bar
+
+.bars {
+    display: flex;
+    justify-content: center;
+    > div {
+        height: 30px;       
+    }
+}
+
+//Player Panel
+
+.player-panel {
+    background: $playerOneColor;
+    width: 140px;
+    height: 500px;
+    text-shadow: 2px 2px #222;
+    border-radius: 5px;
+    padding: 5px;
+    border: 3px solid #222;
+    margin: 10px 0 50px;
+    font-size: 1.3em;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        color: $titleColor;
+        text-shadow: 2px 2px #fff;
+        font-size: 2.2em;
+        margin: 5px 0 10px;
+    }
+}
+
+.turn-info-message {
+    font-family: 'arial';
+    font-size: 0.8em;
+    height: 80px;
+}
+
+.turn-info {
+    color: $titleColor;
+    text-shadow: 2px 2px #222;
+    padding: 20px 0;
+    font-size: 1.5em;
+    
+}
+
+.tip {
+    font-family: 'arial';
+    margin: 20px 0;
+    font-size: 0.8em;
+}
+
+.reserve-title {
+    margin: 5px 0;   
+}
+
+//AI Panel
+
+.info {
+    display: none;
+    margin: 10px 0 0;
+    width: 140px;
+    text-align: left;
+    > div {
+        border: 2px solid #222;
+        padding: 3px 5px;
+        text-shadow: 2px 2px #222;
+        margin: 5px 0;
+        border-radius: 5px;       
+    }
+}
+
+.info-one {
+    background: $playerOneColor;
+    &.highlight {
+        background: lighten($playerOneColor, 15%);
+    }
+    &.defeated {
+        background: $defeatedColor;
+    }
+}
+
+.info-two {
+     background: $playerTwoColor;
+    &.highlight {
+        background: lighten($playerTwoColor, 10%);
+    }
+    &.defeated {
+        background: $defeatedColor;
+    }    
+}
+
+.info-three {
+     background: $playerThreeColor;
+    &.highlight {
+        background: lighten($playerThreeColor, 10%);
+    }
+    &.defeated {
+        background: $defeatedColor;
+    }
+}
+
+.info-four {
+     background: $playerFourColor;
+     &.highlight {
+        background: lighten($playerFourColor, 10%);
+    }
+    &.defeated {
+        background: $defeatedColor;
+    }
+}
+
+.info-five {
+     background: $playerFiveColor;
+    &.highlight {
+        background: lighten($playerFiveColor, 15%);
+    }
+    &.defeated {
+        background: $defeatedColor;
+    }
+}
+
+.info-six {
+     background: $playerSixColor;
+    &.highlight {
+        background: lighten($playerSixColor, 10%);
+    }
+    &.defeated {
+        background: $defeatedColor;
+    }
+}
+
+//Modals
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: rgba(0,0,0, 0.6);
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    background: $modalBackground;
+    position: relative;
+    width: 500px;
+    top: 150px;
+    margin: 0 auto;
+    border: 4px solid #222;
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+//Start Modal
+
+.start-modal {
+    width: 400px;
+    background: $modalBackground;
+    top: 100px;
+    position: relative;
+    margin: 0 auto;
+    font-family: $mainFont;
+    font-size: 2em;
+    z-index: 6;
+    border: 4px solid $titleColor;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 2px 2px black;
+    input {
+        font-size: 0.8em;
+        padding: 4px;
+        font-family: $mainFont;
+        border-radius: 5px;
+        margin: 5px 0;    
+    }
+    button {
+       margin: 10px auto;
+    }
+}
+
+.title {
+    font-size: 2.5em;
+    color: $titleColor;
+    text-shadow: 3px 3px white;
+}
+
+//Win Modal
+
+.win-content {
+    button {
+        margin: 15px auto;
+    }
+}
+
+.win-message {
+    font-size: 3rem;
+    text-shadow: 2px 2px #fff;
+    padding: 10px;
+}
+
+//Bonus Modal
+
+.bonus-modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;  
+    font-size: 1.5em;
+    text-shadow: 2px 2px #222;   
+}
+
+.bonus-modal-content {
+    text-transform: capitalize;
+}
+
+.bonus-modal-text {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #fff;
+    padding: 10px;
+}
